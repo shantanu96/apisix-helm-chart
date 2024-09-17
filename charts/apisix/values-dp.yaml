@@ -10,7 +10,7 @@ externalEtcd:
   # -- if etcd.enabled is false, use external etcd, support multiple address, if your etcd cluster enables TLS, please use https scheme, e.g. https://127.0.0.1:2379.
   host:
     # host or ip e.g. http://172.20.128.89:2379
-    - http://apisix-cp-etcd.apisi.svc:2379
+    - http://apisix-cp-etcd.apisix.svc:2379
   # -- if etcd.enabled is false, user for external etcd. Set empty to disable authentication
   user: ""
   # -- if etcd.enabled is true, use etcd.auth.rbac.rootPassword instead.
