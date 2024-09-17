@@ -16,3 +16,4 @@ dashboard:
         # -- Supports defining multiple etcd host addresses for an etcd cluster
         endpoints:
           - apisix-cp-etcd.apisix.svc:2379
+        prefix: "/"
