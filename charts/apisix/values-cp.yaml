@@ -7,3 +7,12 @@ deployment:
            - https://${etcd_IP}:${etcd_Port}
        prefix: /apisix
        timeout: 30
+
+dashboard:
+  enabled: true
+  config:
+    conf:
+      etcd:
+        # -- Supports defining multiple etcd host addresses for an etcd cluster
+        endpoints:
+          - apisix-cp-etcd.apisix.svc:2379
