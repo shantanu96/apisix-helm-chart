@@ -1,0 +1,9 @@
+deployment:
+    role: control_plane
+    role_control_plane:
+        config_provider: etcd
+    etcd:
+       host:
+           - https://${etcd_IP}:${etcd_Port}
+       prefix: /apisix
+       timeout: 30

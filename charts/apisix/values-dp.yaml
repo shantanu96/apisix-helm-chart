@@ -1,0 +1,19 @@
+deployment:
+    role: data_plane
+    role_data_plane:
+       config_provider: etcd
+etcd:
+  # -- install etcd(v3) by default, set false if do not want to install etcd(v3) together
+  enabled: false
+
+externalEtcd:
+  # -- if etcd.enabled is false, use external etcd, support multiple address, if your etcd cluster enables TLS, please use https scheme, e.g. https://127.0.0.1:2379.
+  host:
+    # host or ip e.g. http://172.20.128.89:2379
+    - http://etcd.host:2379
+  # -- if etcd.enabled is false, user for external etcd. Set empty to disable authentication
+  user: ""
+  # -- if etcd.enabled is true, use etcd.auth.rbac.rootPassword instead.
+  # -- if etcd.enabled is false and externalEtcd.existingSecret is not empty, the password should store in the corresponding secret
+  # -- if etcd.enabled is false and externalEtcd.existingSecret is empty, externalEtcd.password is the passsword for external etcd.
+  password: ""
