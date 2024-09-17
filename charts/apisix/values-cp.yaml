@@ -5,7 +5,7 @@ deployment:
     etcd:
        host:
            - https://${etcd_IP}:${etcd_Port}
-       prefix: /apisix
+       prefix: /
        timeout: 30
 
 dashboard:
