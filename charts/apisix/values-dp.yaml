@@ -17,3 +17,6 @@ externalEtcd:
   # -- if etcd.enabled is false and externalEtcd.existingSecret is not empty, the password should store in the corresponding secret
   # -- if etcd.enabled is false and externalEtcd.existingSecret is empty, externalEtcd.password is the passsword for external etcd.
   password: ""
+service:
+  # -- Apache APISIX service type for user access itself
+  type: LoadBalancer
